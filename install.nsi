@@ -68,7 +68,9 @@ RequestExecutionLevel admin
 
 ; The stuff to install
 Section "7kaa (required)" 7kaareq
-  
+
+  ;make section required
+  SectionIn RO
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
   
