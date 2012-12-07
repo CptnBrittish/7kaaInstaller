@@ -115,6 +115,8 @@ Section "7kaa (required)" 7kaareq
   File ".\7kaa\tutorial\*.*"
   
   ; Write the installation path into the registry
+  ;Reset Install path
+  SetOutPath "$INSTDIR"
   WriteRegStr HKLM SOFTWARE\7kaa "Install_Dir" "$INSTDIR"
   
   ; Write the uninstall keys for Windows
