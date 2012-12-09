@@ -6,20 +6,21 @@ To work it needs the compiled 7kaa files in a subfolder and it will the compile.
 
 7kaaInstaller/
 
-|---installer.nsi
+|--installer.nsi
 
-|---gpl-2.0.txt
+|--gpl-2.0.txt
 
-|---7kaa/
+|--7kaa/
 
-|   |---encyc
+|   |--encyc
 
-|   |---encyc2
+|   |--encyc2
 
-|   |---image
+|   |--image
 
-|   |---resource
+|   |--resource
 
-|   |---scenari2
+|   |--scenari2
+|--music/
 
 etc etc etc

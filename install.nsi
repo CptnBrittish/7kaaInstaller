@@ -131,7 +131,15 @@ Section "7kaa (required)" 7kaareq
   
 SectionEnd
 
-; Optional section (can be disabled by the user)
+; Music Files (Non GPL and Public Domain)(can be disabled by user)
+Section "Music" music
+
+	SetOutPath "$INSTDIR\music"
+	File ".\music\*.*"
+	
+SectionEnd
+
+; Start Menu Shortcuts (can be disabled by the user)
 Section "Start Menu Shortcuts" startshort
 
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
@@ -150,11 +158,13 @@ SectionEnd
 
   ;Language strings
   LangString secreq ${LANG_ENGLISH} "Files required for 7kaa to run"
+  LangString secmusic ${LANG_ENGLISH} "Music files for 7kaa. These are not licensed under the GPL or part of the Public Domain and may only be distributed with 7kaa"
   LangString secshort ${LANG_ENGLISH} "Start menu shortcuts"
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
     !insertmacro MUI_DESCRIPTION_TEXT ${7kaareq} $(secreq)
+	!insertmacro MUI_DESCRIPTION_TEXT ${music} $(secmusic)
 	!insertmacro MUI_DESCRIPTION_TEXT ${startshort} $(secshort)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
